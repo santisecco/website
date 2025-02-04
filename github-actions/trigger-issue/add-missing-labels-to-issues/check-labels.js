@@ -39,6 +39,12 @@ const COMPLEXITY_EXCEPTIONS = [complexity1];
 // ("Review Inactive Team Members" from the "Schedule Monthly" workflow)
 const SPECIAL_CASE = [readyForDevLead, featureAdministrative, size025pt, complexity2, roleDevLeads];
 
+// added for test
+console.log(`LABEL_MISSING = ${LABEL_MISSING}`);
+console.log(`COMPLEXITY_EXCEPTIONS = ${COMPLEXITY_EXCEPTIONS}`);
+console.log(`SPECIAL_CASE = ${SPECIAL_CASE}`);  
+
+//
 // Global variables
 var github;
 var context;
