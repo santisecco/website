@@ -1,6 +1,24 @@
+// Import modules
+const retrieveLabelDirectory = require('../../utils/retrieve-label-directory');
+//QUESTION for Will: Shouldn't it be retrieveLabelName since that's how it's named in retrieve-label-directory.js?
 // Global variables
 var github 
 var context
+
+//QUESTION for Will: Is it ok if we declare the variables here instead of declaring them inside main
+//as retrieveLabelDirectory doesn't use github and context.
+// Label constants use labelKeys to retrieve current labelNames from directory
+const RELEVANT_ROLES = [
+    roleFrontEnd,
+    roleBackEndDevOps,
+    roleDesign,
+    roleUserResearch
+  ] = [
+    "roleFrontEnd",
+    "roleBackEndDevOps",
+    "roleDesign",
+    "roleUserResearch",
+  ].map(retrieveLabelDirectory);
 
 /**
  * @description - entry point of the whole javascript file, finds out whether we need to post the comment or not and returns in the boolean variable shouldpost.
@@ -41,7 +59,7 @@ function obtainLabels(){
  * @returns - A boolean which tells whether we are supposed to post a preliminary update based on the given issue checks
  */
 
-function postComment(existingLabels){
+/* function postComment(existingLabels){
     //issue states that we are to post the comment if--> there is a role: back end/devOps tag...(continued on next comment)
     if(existingLabels.includes("role: back end/devOps")){
         return true
@@ -64,6 +82,14 @@ function postComment(existingLabels){
 
     //otherwise we return a false
     return false
-}
+} */
+
+
+function postComment(existingLabels){
+    // Compare whether a RELEVANT_ROLE is included in the existingLabels
+    const roleFound = RELEVANT_ROLES.some(label => existingLabels.includes(label));
+    console.log(roleFound ? '\nFound relevant role: Continue' : '\nMissing relevant role: Halt');
+    return roleFound
+  }
 
 module.exports = main
