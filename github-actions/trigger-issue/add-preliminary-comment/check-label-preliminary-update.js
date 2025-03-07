@@ -1,3 +1,4 @@
+console.log("🚀 Script is running... March 2025");
 // Import modules
 const retrieveLabelDirectory = require('../../utils/retrieve-label-directory');
 //QUESTION for Will: Shouldn't it be retrieveLabelName since that's how it's named in retrieve-label-directory.js?
@@ -33,7 +34,7 @@ function main({g, c}){
     const issueNum = context.payload.issue.number
 
     //Console log to check if script is running
-    console.log("Script is running... March 2025");
+    console.log("✅ Main function has been called!");
 
 
     //Find out what the existing labels in the issue are:-
