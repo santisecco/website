@@ -31,6 +31,11 @@ function main({g, c}){
     github = g
     context = c
     const issueNum = context.payload.issue.number
+
+    //Console log to check if script is running
+    console.log("Script is running... March 2025");
+
+
     //Find out what the existing labels in the issue are:-
     var existingLabels = obtainLabels()
     
@@ -90,6 +95,6 @@ function postComment(existingLabels){
     const roleFound = RELEVANT_ROLES.some(label => existingLabels.includes(label));
     console.log(roleFound ? '\nFound relevant role: Continue' : '\nMissing relevant role: Halt');
     return roleFound
-  }
+}
 
 module.exports = main
