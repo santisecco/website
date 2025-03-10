@@ -2,12 +2,14 @@ console.log("🚀 Script is running... March 2025");
 // Import modules
 const retrieveLabelDirectory = require('../../utils/retrieve-label-directory');
 //QUESTION for Will: Shouldn't it be retrieveLabelName since that's how it's named in retrieve-label-directory.js?
+//ANSWER: We decided to keep the variable named as it is, and then eventually change the function name in retrieve-label-directory.js to retrieveLabelDirectory.
 // Global variables
 var github 
 var context
 
 //QUESTION for Will: Is it ok if we declare the variables here instead of declaring them inside main
-//as retrieveLabelDirectory doesn't use github and context.
+//as retrieveLabelDirectory doesn't use github and context. (See that map() calls the function)
+//ANSWER: Yes, here is correct.
 // Label constants use labelKeys to retrieve current labelNames from directory
 const RELEVANT_ROLES = [
     roleFrontEnd,
