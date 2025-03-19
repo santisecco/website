@@ -40,39 +40,6 @@ leadership:
       slack: https://hackforla.slack.com/team/U078K03LP5L
       github: https://github.com/Eleftherios01
     picture: https://avatars.githubusercontent.com/Eleftherios01
-  - name: Will Gillis
-    role: Developer Co-Lead
-    links:
-      slack: 'https://hackforla.slack.com/team/U043LGHSZFT'
-      github: 'https://github.com/t-will-gillis'
-    picture: https://avatars.githubusercontent.com/t-will-gillis
-  - name: Ren Demeis-Ortiz
-    role: Merge Team
-    links:
-      slack: https://hackforla.slack.com/team/U059K7A1VFB
-      github: https://github.com/LRenDO
-    picture: https://avatars.githubusercontent.com/LRenDO
-  - name: J Pham
-    github-handle: jphamtv
-    role: Merge Team
-    links:
-      slack: 'https://hackforla.slack.com/team/U064FRUF893'
-      github: 'https://github.com/jphamtv'
-    picture: https://avatars.githubusercontent.com/jphamtv
-  - name: Danielle Hanson Aras
-    github-handle:
-    role: Merge Team
-    links:
-      slack: 'https://hackforla.slack.com/team/U076DT96PUJ'
-      github: 'https://github.com/daras-cu'
-    picture: https://avatars.githubusercontent.com/daras-cu
-  - name: Siyun Feng
-    github-handle: siyunfeng
-    role: Merge Team
-    links:
-      slack: https://hackforla.slack.com/team/U07QWL2A5BN
-      github: https://github.com/siyunfeng
-    picture: https://avatars.githubusercontent.com/siyunfeng
   - name: Amen Divine Ikamba
     github-handle: amen-ikamba
     role: Product Manager - Dashboards
@@ -94,6 +61,53 @@ leadership:
       slack: https://hackforla.slack.com/team/U07TRV9HRFS
       github: https://github.com/priyanka02art
     picture: https://avatars.githubusercontent.com/priyanka02art
+  - name: Will Gillis
+    role: Developer Co-Lead
+    links:
+      slack: 'https://hackforla.slack.com/team/U043LGHSZFT'
+      github: 'https://github.com/t-will-gillis'
+    picture: https://avatars.githubusercontent.com/t-will-gillis
+  - name: Danielle Hanson Aras
+    github-handle: daras-cu
+    role: Developer Co-Lead
+    links:
+      slack: 'https://hackforla.slack.com/team/U076DT96PUJ'
+      github: 'https://github.com/daras-cu'
+    picture: https://avatars.githubusercontent.com/daras-cu
+  - name: Ren Demeis-Ortiz
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U059K7A1VFB
+      github: https://github.com/LRenDO
+    picture: https://avatars.githubusercontent.com/LRenDO
+  - name: J Pham
+    github-handle: jphamtv
+    role: Merge Team
+    links:
+      slack: 'https://hackforla.slack.com/team/U064FRUF893'
+      github: 'https://github.com/jphamtv'
+    picture: https://avatars.githubusercontent.com/jphamtv
+  - name: Siyun Feng
+    github-handle: siyunfeng
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U07QWL2A5BN
+      github: https://github.com/siyunfeng
+    picture: https://avatars.githubusercontent.com/siyunfeng
+  - name: Daniel Franco
+    github-handle: FamousHero
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U076AV5ALPP
+      github: https://github.com/FamousHero
+    picture: https://avatars.githubusercontent.com/FamousHero
+  - name: Kristen Cardon
+    github-handle: k-cardon
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U07HCNXLCKH
+      github: https://github.com/k-cardon
+    picture: https://avatars.githubusercontent.com/k-cardon
 links:
   - name: Wiki
     url: 'https://github.com/hackforla/website/wiki'
