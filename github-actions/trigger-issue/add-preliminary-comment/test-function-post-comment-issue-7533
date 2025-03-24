@@ -1,0 +1,160 @@
+// This is a simple test file for the function postComment() that was refactored in Issue 7533
+
+// Define the relevant roles globally
+const RELEVANT_ROLES = [
+    "role: back end/devOps",
+    "role: front end",
+    "role: design",
+    "role: user research"
+];
+
+function postComment(existingLabels) {
+    //issue states that we are to post the comment if--> there is a role: back end/devOps tag
+    if (existingLabels.includes("role: back end/devOps")) {
+        return true;
+    }
+
+    // or if there is a role: front end tag
+    else if (existingLabels.includes("role: front end")) {
+        return true;
+    }
+
+    //or if there is a role: design tag
+    else if (existingLabels.includes("role: design")) {
+        return true;
+    }
+
+    //or if there is a role: user research
+    else if (existingLabels.includes("role: user research")) {
+        return true;
+    }
+
+    //otherwise we return false
+    return false;
+}
+
+// Simple test function
+function runTests() {
+    const tests = [
+        {
+            input: ["role: back end/devOps"],
+            expected: true,
+            description: "Should return true for 'role: back end/devOps'"
+        },
+        {
+            input: ["role: front end"],
+            expected: true,
+            description: "Should return true for 'role: front end'"
+        },
+        {
+            input: ["role: design"],
+            expected: true,
+            description: "Should return true for 'role: design'"
+        },
+        {
+            input: ["role: user research"],
+            expected: true,
+            description: "Should return true for 'role: user research'"
+        },
+        {
+            input: ["role: marketing"],
+            expected: false,
+            description: "Should return false for unrelated role 'role: marketing'"
+        },
+        {
+            input: ["other label", "role: marketing"],
+            expected: false,
+            description: "Should return false when none of the relevant roles exist"
+        },
+        {
+            input: ["other label", "role: front end"],
+            expected: true,
+            description: "Should return true when one relevant role exists among other labels"
+        },
+        {
+            input: [],
+            expected: false,
+            description: "Should return false when labels are empty"
+        }
+    ];
+
+    tests.forEach((test, index) => {
+        const result = postComment(test.input);
+        const pass = result === test.expected;
+        console.log(`${pass ? "✅" : "❌"} Test ${index + 1}: ${test.description}`);
+        if (!pass) {
+            console.log(`   Expected: ${test.expected}, but got: ${result}`);
+        }
+    });
+}
+
+// Run the tests
+runTests();
+
+
+
+function postComment(existingLabels) {
+    // Compare whether a RELEVANT_ROLE is included in the existingLabels
+    const roleFound = RELEVANT_ROLES.some(label => existingLabels.includes(label));
+    console.log(roleFound ? '\nFound relevant role: Continue' : '\nMissing relevant role: Halt');
+    return roleFound;
+}
+
+
+
+function runTests2() {
+    const tests = [
+        {
+            input: ["role: back end/devOps"],
+            expected: true,
+            description: "Should return true for 'role: back end/devOps'"
+        },
+        {
+            input: ["role: front end"],
+            expected: true,
+            description: "Should return true for 'role: front end'"
+        },
+        {
+            input: ["role: design"],
+            expected: true,
+            description: "Should return true for 'role: design'"
+        },
+        {
+            input: ["role: user research"],
+            expected: true,
+            description: "Should return true for 'role: user research'"
+        },
+        {
+            input: ["role: marketing"],
+            expected: false,
+            description: "Should return false for unrelated role 'role: marketing'"
+        },
+        {
+            input: ["other label", "role: marketing"],
+            expected: false,
+            description: "Should return false when none of the relevant roles exist"
+        },
+        {
+            input: ["other label", "role: front end"],
+            expected: true,
+            description: "Should return true when one relevant role exists among other labels"
+        },
+        {
+            input: [],
+            expected: false,
+            description: "Should return false when labels are empty"
+        }
+    ];
+
+    tests.forEach((test, index) => {
+        const result = postComment(test.input);
+        const pass = result === test.expected;
+        console.log(`${pass ? "✅" : "❌"} Test ${index + 1}: ${test.description}`);
+        if (!pass) {
+            console.log(`   Expected: ${test.expected}, but got: ${result}`);
+        }
+    });
+}
+
+// Run the tests
+runTests2();
