@@ -23,7 +23,7 @@ const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 
 // Filter it
 function filterJson(e) {
-  const project = e.project || {};
+  const p = e.project || {};
   return {
     // minimal top-level fields the site uses
     name: e.name ?? null,            // meeting title
