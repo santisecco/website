@@ -22,7 +22,7 @@ const dataPath = '_data/external/vrms_data.json';
 const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 
 // Filter it
-function filterJson(data) {
+function filterJson(e) {
   const project = data.project || {};
   return {
     // minimal top-level fields the site uses
