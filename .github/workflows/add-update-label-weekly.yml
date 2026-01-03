@@ -22,7 +22,7 @@ on:
 jobs:
   Add-Update-Label-Weekly:
     runs-on: ubuntu-latest
-    if: github.repository == 'hackforla/website' # ⓶
+    if: github.repository == 'santiseccovidal/website' # ⓶
     steps:
       - name: Generate token from GitHub App
         id: generate-app-token
